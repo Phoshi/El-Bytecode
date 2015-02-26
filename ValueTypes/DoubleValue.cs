@@ -14,6 +14,10 @@ namespace Speedycloud.Bytecode.ValueTypes {
             get { throw new ValueException(ValueType.Double, ValueType.Boolean); }
         }
 
+        public override string ToString() {
+            return string.Format("(Double: {0})", Double);
+        }
+
         public string String {
             get { throw new ValueException(ValueType.Double, ValueType.String); }
         }
@@ -28,6 +32,21 @@ namespace Speedycloud.Bytecode.ValueTypes {
 
         public DoubleValue(double value) {
             Double = value;
+        }
+
+        protected bool Equals(DoubleValue other) {
+            return Double.Equals(other.Double);
+        }
+
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((DoubleValue) obj);
+        }
+
+        public override int GetHashCode() {
+            return Double.GetHashCode();
         }
     }
 }

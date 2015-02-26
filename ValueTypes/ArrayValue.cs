@@ -22,6 +22,10 @@ namespace Speedycloud.Bytecode.ValueTypes {
         public double Double { get { throw new ValueException(ValueType.Array, ValueType.Double); } }
         public bool Boolean { get { throw new ValueException(ValueType.Array, ValueType.Boolean); } }
 
+        public override string ToString() {
+            return string.Format("(Array {0})", string.Join(", ", arr.Select(x=>x.ToString())));
+        }
+
         public string String {
             get {
                 if (arr.Any(elem=>elem.Type != ValueType.Integer))

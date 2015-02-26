@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Speedycloud.Runtime.ValueTypes;
 
 namespace Speedycloud.Bytecode.ValueTypes {
@@ -16,6 +17,9 @@ namespace Speedycloud.Bytecode.ValueTypes {
             return new ComplexValue(newSlots.ToArray());
         }
 
+        public override string ToString() {
+            return string.Format("(Complex: {0})", string.Join(", ", slots.Select(x=>x.ToString())));
+        }
 
         public ValueType Type { get { return ValueType.Complex; } }
         public long Integer { get { throw new ValueException(ValueType.Complex, ValueType.Integer); } }

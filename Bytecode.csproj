@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BytecodeSerialiser.cs" />
     <Compile Include="Instruction.cs" />
     <Compile Include="Opcode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

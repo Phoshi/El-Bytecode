@@ -14,5 +14,24 @@ namespace Speedycloud.Bytecode.ValueTypes {
         public StringValue(string str) {
             String = str;
         }
+
+        public override string ToString() {
+            return string.Format("(String {0})", String);
+        }
+
+        protected bool Equals(StringValue other) {
+            return string.Equals(String, other.String);
+        }
+
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((StringValue) obj);
+        }
+
+        public override int GetHashCode() {
+            return (String != null ? String.GetHashCode() : 0);
+        }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bytecode", "Bytecode.csproj", "{1B88B7A9-CAC1-4E88-A0F1-DBA4CBEA2FC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BytecodeTests", "BytecodeTests\BytecodeTests.csproj", "{30F3216B-086C-4B19-8A2E-2C8CA6A31B5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1B88B7A9-CAC1-4E88-A0F1-DBA4CBEA2FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B88B7A9-CAC1-4E88-A0F1-DBA4CBEA2FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B88B7A9-CAC1-4E88-A0F1-DBA4CBEA2FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F3216B-086C-4B19-8A2E-2C8CA6A31B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F3216B-086C-4B19-8A2E-2C8CA6A31B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F3216B-086C-4B19-8A2E-2C8CA6A31B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F3216B-086C-4B19-8A2E-2C8CA6A31B5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

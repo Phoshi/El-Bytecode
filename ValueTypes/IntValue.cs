@@ -24,6 +24,10 @@ namespace Speedycloud.Bytecode.ValueTypes {
             get { throw new ValueException(ValueType.Integer, ValueType.Array); }
         }
 
+        public override string ToString() {
+            return string.Format("(Integer {0})", Integer);
+        }
+
         public ComplexValue Complex {
             get { throw new ValueException(ValueType.Integer, ValueType.Complex); }
         }
